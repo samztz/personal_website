@@ -1,0 +1,6 @@
+Project One目的是要为Stakeholder(甲方) 做一款基础的个人/商用网站 静态网站，
+甲方可以是你的朋友，律师，PT，会计，设计师，小咖啡店，公司官网等。
+
+主要目的锻炼基础的HTML，CSS，JavaScript，以及Sass，jQuery，Bootstrap等。可以添加付款，
+Schedule预约等功能扩展第一个项目的商业化。
+锻炼跟客户的交流能力。以及如何简单部署一个网站

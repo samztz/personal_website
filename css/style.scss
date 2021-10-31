@@ -1,0 +1,258 @@
+body {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  
+}
+
+@mixin border($color: white) {
+  border-style: solid;
+  border-width: 5px;
+}
+
+$navbar_width: 320px;
+
+.root {
+  
+  %basic_page {
+    width: 100%;
+    position: relative;
+  }
+
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: both;
+  padding-left: $navbar_width;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  .mob_nav {
+    position: fixed;
+    display: none;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+
+    .mob_nav_button {
+      background-color: black;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border-color: black;
+      display: block;
+      img {
+        max-width: 25px;
+        height: auto;
+        margin: auto;
+        filter: invert(100%) sepia(4%) saturate(14%) hue-rotate(21deg)
+          brightness(104%) contrast(103%);
+        // this filter used to change black svg file into white svg file
+      }
+    }
+  }
+
+  .sidenav {
+    display: block;
+    position: fixed;
+    width: $navbar_width;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+    z-index: 99;
+    background-color: black;
+    transition: 0.5s;
+
+    .sidenav_logo {
+      color: white;
+      font-size: 35px;
+      width: 100%;
+      height: auto;
+      clear: both;
+      float: left;
+      border-bottom: 1px solid #cbd3d9;
+      padding: 40px;
+    }
+    .sidenav_menu {
+      width: 100%;
+      display: block;
+      height: auto;
+      // clear: both;
+      float: left;
+      padding: 50px 20px 0 20px;
+      .line {
+        // @include border();
+        display: flex;
+        align-items: center;
+
+        margin: 10px;
+        border-radius: 10px;
+        border-width: 10px;
+        padding: 15px 8px 15px 18px;
+
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+        transition: 0.5s;
+        img {
+          padding-left: 15px;
+          margin-right: 15px;
+          max-height: 24px;
+          width: 39px;
+          filter: invert(100%) sepia(4%) saturate(14%) hue-rotate(21deg)
+            brightness(104%) contrast(103%);
+        }
+      }
+      .line:hover {
+        background-color: rgb(35, 38, 49);
+      }
+      .line:active {
+        background-color: rgb(35, 38, 49);
+      }
+    }
+    .sidenav_author {
+      position: absolute;
+      color: white;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border-top: 1px solid #cbd3d9;
+    }
+  }
+
+  .sidenav_open {
+    
+    @extend .sidenav;
+    transform: translateX(0) !important;
+  }
+
+  .page_home {
+    @extend %basic_page;
+    background-color: ghostwhite;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .page_home_main {
+      // @include border();
+      position: relative;
+      display: block;
+      outline: none;
+      height: 100%;
+      width: 540px;
+
+      padding: 100px 20px;
+      .page_home_portrait {
+        min-width: 50%;
+        max-width: 70%;
+        height: auto;
+        border-radius: 50%;
+        filter: grayscale(100%);
+      }
+      h1 {
+        margin: 20px 0 20px 0;
+        font-size: 55px;
+        font-weight: 900;
+        font-family: "Audiowide";
+      }
+      p {
+        color: grey;
+      }
+      .page_home_icons {
+        padding: 10px;
+        a {      
+          width: 35px;   
+          border: { 
+            right-style: solid;
+            right-color: #808080;
+            width: 1px;          
+          }
+          padding: 0 15px 0 13px;        
+          img {
+            transition: 0.5s;
+            width: 30px;
+            height: auto;
+            filter: invert(41%) sepia(0%) saturate(2%) hue-rotate(136deg)
+              brightness(96%) contrast(81%);          
+          }
+        }
+        a:hover {          
+          img {
+            transform: translateY(-4px);            
+          }
+        }
+        #linkedin_icon {border-right-style: none}
+      }
+      .downloadCV_button {
+        margin-top: 30px;
+        a {          
+          padding: 8px 35px 7px 35px;
+          text-decoration: none;   
+          color: black;
+          transition: 0.5s;
+          border: {
+            style: solid;
+            color: grey;
+            width: 2px;
+            radius: 100px;
+          }        
+        }
+        a:hover {          
+          background-color: black;
+          border-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .page_about {
+    @extend %basic_page;
+    background-color: white;
+    height: 1100px;
+    padding: 120px 0 120px 0;
+    .container {
+      @include border();
+      height: 100%;
+      
+    }
+  }
+
+  .page_portfolio {
+    @extend %basic_page;
+    background-color: ghostwhite;
+    height: 800px;
+  }
+  .page_contact {
+    @extend %basic_page;
+    background-color: white;
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .root {
+    padding-left: $navbar_width;
+    .mob_nav {
+      display: none;
+    }
+    .sidenav {
+      transform: translateX(0);
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .root {
+    padding-left: 0;
+    .mob_nav {
+      display: block;
+    }
+    .sidenav {
+      transform: translateX(-100%);
+    }
+  }
+}
