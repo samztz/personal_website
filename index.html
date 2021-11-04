@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Joey Jiang's Home page">
+  <meta name="author" content="Sam Zhou">
   <meta charset="utf-8">
-  <script src="./javascript/behaviour.js"></script>
 </head>
 
 <body>
@@ -46,10 +47,10 @@
       <div class="sidenav_author">author</div>
     </div>
     <div id="Home" class="page_home">
-      <div class="page_home_main">
+      <div class="page_home_content">
         <img src="css/assets/img/portrait_home.jpg" class="page_home_portrait">
         <h1 class="name">Joey Jiang</h1>
-        <p>I am a Architecture designer lived in Sydney.</p>
+        <p>Architecture designer based in Sydney.</p>
         <div class="page_home_icons">
           <a><img src="./css/assets/icon/messenger.svg"></img></a>
           <a><img src="./css/assets/icon/discord.svg"></img></a>
@@ -58,18 +59,111 @@
           <a id="linkedin_icon"><img src="./css/assets/icon/linkedin.svg"></img></a>
         </div>
         <div class="downloadCV_button">
-          <a href="#" >Download CV</a>
+          <a href="#">Download CV</a>
+        </div>
+      </div>
+    </div>
+    <section id="About" class="page_about">
+      <div class="page_about_container">
+        <h2>About</h2>
+        <div class="content">
+          <div class="content_left">
+            <div class="info">
+              <h3>Hi, I'm <b>Joey Jiang</b></h3>
+              <p>I'm a Freelancer Front-end Developer with over 6 years of experience. I'm from San Francisco. I code
+                and
+                create web elements for amazing people around the world. I like work with new people.
+              <p>
+            </div>
+            <div class="skill">
+              <h3><b>My Skill level?</b></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+            </div>
+            <div class="downloadCV_button">
+              <a href="#">Download CV</a>
+            </div>
+          </div>
+          <div class="content_right">
+            <img src="./css/assets/img/Portrait_fullbody.jpg" class="" alt="full width photo">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="Portfolio" class="page_portfolio">
+      <div class="portfolio_container">
+        <h2>Portfolio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+        <div class="gallery_container">
+          <button id="PrevB" class="slide_button">
+            <img src="./css/assets/icon/left-arrow.svg" alt="left button">
+          </button>
+          <button id="NextB" class="slide_button button_right">
+            <img src="./css/assets/icon/left-arrow.svg" alt="right button">
+          </button>
+          <div id="Gallery" class="gallery">
+            <a id="Last_clone"><img src="./css/assets/img/demo5.jpg" alt="demo"></a>
+            <a><img src="./css/assets/img/demo1.jpg" alt="demo"></a>
+            <a><img src="./css/assets/img/demo2.jpg" alt="demo"></a>
+            <a><img src="./css/assets/img/demo3.jpg" alt="demo"></a>
+            <a><img src="./css/assets/img/demo4.jpg" alt="demo"></a>
+            <a><img src="./css/assets/img/demo5.jpg" alt="demo"></a>
+            <a id="First_clone"><img src="./css/assets/img/demo1.jpg" alt="demo"></a>
+            <a><img src="./css/assets/img/demo2.jpg" alt="demo"></a>
+            <a><img src="./css/assets/img/demo3.jpg" alt="demo"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Contact" class="page_contact">
+      <div class="contact_container">
+        <h2>Contact</h2>
+        <p class="more">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas
+          tellus.</p>
+        <div class="contact_cards">
+          <div class="card">
+            <div class="icon"><img src="./css/assets/icon/phone.svg" alt="icon"></div>
+            <div class="content">
+              <h4>Phone</h4>
+              <p>+451 000 000</p>
+              <p>+451 000 000</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon"><img src="./css/assets/icon/email.svg" alt="icon"></div>
+            <div class="content">
+              <h4>Email</h4>
+              <p>support@gmail.com</p>
+              <p>example@gmail.com</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon"><img src="./css/assets/icon/map.svg" alt="icon"></div>
+            <div class="content">
+              <h4>Address</h4>
+              <p>Envato 121 King St,</p>
+              <p>Melbourne, Australia</p>
+            </div>
+          </div>
+        </div>
+        <div class="form_map_container">
+          <div class="email_form">
+            <div class="title">
+              <p>I am always open to discussing product.</p>
+              <span>design work or partnerships.</span>
+            </div>
+            <form class="contact_detail">
+              <div><input name=name type="text" class="input_field" placeholder="Name *"></div>
+              <div><input name=email type="text" class="input_field" placeholder="Email *"></div>
+              <div><input name=address type="text" class="input_field" placeholder="Address *"></div>
+            </form>
+          </div>
+          <div class="map">            
+          </div>
         </div>        
       </div>
     </div>
-    <div id="About" class="page_about">
-      <div class="container">
-        <h3>About Me</h3>
-      </div>      
-    </div>
-    <div id="Portfolio" class="page_portfolio"><h3>Portfolio</h3></div>
-    <div id="Contact" class="page_contact"><h3>Contact</h3>></div>
   </div>
+  <script src="./javascript/behaviour.js"></script>
 </body>
 
 </html>
