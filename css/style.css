@@ -22,10 +22,10 @@ body {
   margin: auto;
   max-width: 1500px;
 }
-.root .page_about .page_about_container .content .content_left .downloadCV_button, .root .page_home .page_home_content .downloadCV_button {
+.root .page_contact .form_map_container .email_form .contact_detail .submmit_button, .root .page_about .page_about_container .content .content_left .downloadCV_button, .root .page_home .page_home_content .downloadCV_button {
   margin-top: 30px;
 }
-.root .page_about .page_about_container .content .content_left .downloadCV_button a, .root .page_home .page_home_content .downloadCV_button a {
+.root .page_contact .form_map_container .email_form .contact_detail .submmit_button a, .root .page_about .page_about_container .content .content_left .downloadCV_button a, .root .page_home .page_home_content .downloadCV_button a {
   padding: 8px 35px 7px 35px;
   text-decoration: none;
   color: black;
@@ -35,7 +35,7 @@ body {
   border-width: 2px;
   border-radius: 100px;
 }
-.root .page_about .page_about_container .content .content_left .downloadCV_button a:hover, .root .page_home .page_home_content .downloadCV_button a:hover {
+.root .page_contact .form_map_container .email_form .contact_detail .submmit_button a:hover, .root .page_about .page_about_container .content .content_left .downloadCV_button a:hover, .root .page_home .page_home_content .downloadCV_button a:hover {
   background-color: black;
   border-color: black;
   color: white;
@@ -196,7 +196,7 @@ body {
   background-color: white;
 }
 .root .page_about .page_about_container .content {
-  border: 5px solid black;
+  border: 5px none black;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -204,7 +204,7 @@ body {
 }
 .root .page_about .page_about_container .content .content_left {
   max-width: 50%;
-  border: 5px solid cyan;
+  border: 5px none cyan;
 }
 .root .page_about .page_about_container .content .content_left p {
   font-size: 20px;
@@ -217,7 +217,7 @@ body {
 }
 .root .page_about .page_about_container .content .content_right {
   max-width: 35%;
-  border: 5px solid blue;
+  border: 5px none blue;
 }
 .root .page_about .page_about_container .content .content_right img {
   width: 100%;
@@ -308,11 +308,12 @@ body {
   width: 100%;
   height: auto;
   flex-wrap: wrap;
-  border: 5px solid yellow;
+  margin-bottom: 50px;
+  border: 5px none yellow;
   justify-content: space-between;
 }
 .root .page_contact .contact_container .contact_cards .card {
-  border: 5px solid black;
+  border: 5px none black;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -322,7 +323,7 @@ body {
   width: 450px;
   height: 170px;
   padding: 33px;
-  margin: 20px;
+  margin: 20px 0 0 0;
 }
 .root .page_contact .contact_container .contact_cards .card .icon {
   width: 55px;
@@ -349,29 +350,50 @@ body {
   display: flex;
 }
 .root .page_contact .form_map_container .email_form {
-  border: 5px solid black;
+  border: 5px none black;
   width: 50%;
   height: 100%;
+  background-color: ghostwhite;
   padding: 50px 45px 55px 45px;
+  margin-right: 15px;
 }
-.root .page_contact .form_map_container .email_form p {
+.root .page_contact .form_map_container .email_form .title {
+  padding: 15px 20px 15px 20px;
+}
+.root .page_contact .form_map_container .email_form .title p {
   margin: 0;
   font-size: 25px;
 }
-.root .page_contact .form_map_container .email_form span {
+.root .page_contact .form_map_container .email_form .title span {
   margin: 0;
   font-size: 25px;
 }
-.root .page_contact .form_map_container .email_form .contact_detail .input_field {
-  width: 60%;
+.root .page_contact .form_map_container .email_form .contact_detail {
+  padding: 15px 20px 15px 20px;
+}
+.root .page_contact .form_map_container .email_form .contact_detail input[type=text] {
+  outline: none;
+  transition: 0.5s;
+  width: 100%;
+  background-color: transparent;
   font-size: large;
   padding: 10px 10px 10px 0;
   margin-bottom: 40px;
   border: none;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
+}
+.root .page_contact .form_map_container .email_form .contact_detail input[type=text]:focus {
+  border-bottom: 1px solid black;
 }
 .root .page_contact .form_map_container .map {
-  border: 5px solid green;
+  border: 5px none green;
+  width: 50%;
+  padding: 10px;
+  background-color: ghostwhite;
+}
+.root .page_contact .form_map_container .map iframe {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 2000px) {
@@ -398,6 +420,10 @@ body {
   .root .page_contact .more {
     max-width: 60%;
   }
+  .root #GoogleMap {
+    width: 50%;
+    height: 400px;
+  }
 }
 @media screen and (max-width: 769px) {
   .root .page_contact .more {
@@ -408,6 +434,17 @@ body {
   }
   .root .page_about .content .content_right {
     display: none;
+  }
+  .root #Form_map {
+    flex-wrap: wrap;
+  }
+  .root #Form_map .email_form {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .root #Form_map .map {
+    width: 100%;
+    height: 80vw;
   }
 }
 
