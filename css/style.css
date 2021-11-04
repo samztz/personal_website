@@ -130,7 +130,11 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  padding: 20px;
   border-top: 1px solid #cbd3d9;
+}
+.root .sidenav .sidenav_author p, .root .sidenav_open .sidenav_author p {
+  margin-bottom: 2px;
 }
 .root .sidenav_open {
   transform: translateX(0) !important;
@@ -390,10 +394,15 @@ body {
   width: 50%;
   padding: 10px;
   background-color: ghostwhite;
+  filter: grayscale(100%);
+  transition: 0.7s;
 }
 .root .page_contact .form_map_container .map iframe {
   width: 100%;
   height: 100%;
+}
+.root .page_contact .form_map_container .map:hover {
+  filter: none;
 }
 
 @media screen and (max-width: 2000px) {
