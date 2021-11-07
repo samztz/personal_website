@@ -420,6 +420,10 @@ body {
   .root {
     padding-left: 0;
   }
+  .root .page_contact .contact_container .more {
+    width: 100%;
+    max-width: 450px;
+  }
   .root .mob_nav {
     display: block;
   }
@@ -435,14 +439,16 @@ body {
   }
 }
 @media screen and (max-width: 769px) {
-  .root .page_contact .more {
+  .root .page_contact .contact_container .more {
+    width: 100%;
+    max-width: 450px;
+  }
+  .root .page_about .page_about_container .content .content_left {
+    width: 100%;
     max-width: 100%;
   }
-  .root .page_about .content .content_left {
-    max-width: 100%;
-  }
-  .root .page_about .content .content_right {
-    display: none;
+  .root .page_about .page_about_container .content .content_right {
+    width: 0;
   }
   .root #Form_map {
     flex-wrap: wrap;
